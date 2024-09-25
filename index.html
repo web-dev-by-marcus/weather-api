@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./develop/style.css" />
+    <title>Document</title>
+  </head>
+
+  <header>
+    <h1 id="header">Weather Dashboard</h1>
+  </header>
+
+  <body onload="loadLast()">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-3">
+          <h3 class="text-center"><strong>Search for a city</strong></h3>
+          <form>
+            <label for="cityIn"><strong>City:</strong></label
+            ><br />
+            <input type="text" id="cityIn" name="cityIn" /><br />
+            <label for="stateIn"><strong>State or Province:</strong></label
+            ><br />
+            <input type="text" id="stateIn" name="stateIn" /><br />
+          </form>
+          <br />
+          <button type="search" id="search">Search</button>
+          <hr />
+          <div id="history" class="container"></div>
+        </div>
+        <div class="col col-lg-9">
+          <div id="current">
+            <h3 id="displayResults"></h3>
+            <div id="temp"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
+            <div id="uvi">UV Index: <span id="uviSpan"></span></div>
+          </div>
+          <p><strong>5-Day Forecast:</strong></p>
+          <div class="row" id="fiveDay"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./develop/script.js"></script>
+  </body>
+
+  <footer></footer>
+</html>

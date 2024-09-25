@@ -1,0 +1,90 @@
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    }
+    
+    #header {
+        text-align: center;
+        background-image: linear-gradient(90deg, #198bdc 0%, #003366 100%);
+        color: var(--secondary-color);
+    }
+    
+    #cityIn {
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    #stateIn {
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    #search {
+        border-radius: 5px;
+        background-color: #73b9ec;
+        width: 100%;
+    }
+    
+    hr {
+        border: solid 1px;
+    }
+    
+    .cityButton {
+        border: none;
+        border-radius: 5px;
+        padding:5px;
+        margin:5px;
+        width: 100%;
+    }
+    
+    .dateText {
+        text-align: center;
+    }
+    
+    .fiveDayCard {
+        background-color: #003366;
+        color:white;
+        width: fit-content;
+    }
+    
+    #current {
+    border: solid;
+    margin:10px;
+    padding: 10px;
+    line-height: 2;
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    p {
+        padding:10px;
+        margin:10px;
+        font-weight: bold;
+        font-size: 16pt;
+    }
+    
+    #fiveDay {
+        justify-content: space-around;
+    }
+    
+    .row {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    #displayResults {
+        font-weight: bold;
+    }
+    
+    #history {
+        width: fit-content;
+    }
+    
+    #uviSpan {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
