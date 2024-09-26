@@ -1,56 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Link to css  -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./develop/style.css" />
-    <title>Document</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Weather Dashboard</title>
   </head>
-
-  <header>
-    <h1 id="header">Weather Dashboard</h1>
-  </header>
-
-  <body onload="loadLast()">
+  <body>
     <div class="container">
-      <div class="row">
-        <div class="col col-lg-3">
-          <h3 class="text-center"><strong>Search for a city</strong></h3>
-          <form>
-            <label for="cityIn"><strong>City:</strong></label
-            ><br />
-            <input type="text" id="cityIn" name="cityIn" /><br />
-            <label for="stateIn"><strong>State or Province:</strong></label
-            ><br />
-            <input type="text" id="stateIn" name="stateIn" /><br />
-          </form>
-          <br />
-          <button type="search" id="search">Search</button>
-          <hr />
-          <div id="history" class="container"></div>
+      <!-- Beginning of jumbotron  -->
+      <div class="jumbotron-fluid bg-dark text-white text-center">
+        <div class="container">
+          <h1 class="display-4">Weather Dashboard</h1>
         </div>
-        <div class="col col-lg-9">
-          <div id="current">
-            <h3 id="displayResults"></h3>
-            <div id="temp"></div>
-            <div id="humidity"></div>
-            <div id="wind"></div>
-            <div id="uvi">UV Index: <span id="uviSpan"></span></div>
+      </div>
+      <!-- Beginning of row 1 -->
+      <div class="row">
+        <!-- Beginning of col 1 in rwo 1 -->
+        <div class="col-3 m-2 bg-light">
+          <h3>Search for a City:</h3>
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="city-input"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                id="add-city"
+                class="btn btn-outline-secondary bg-primary"
+                type="button"
+              >
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
           </div>
-          <p><strong>5-Day Forecast:</strong></p>
-          <div class="row" id="fiveDay"></div>
+          <!-- Beginning of history cities box -->
+          <div class="card" style="width: 15rem">
+            <ul id="city-list" class="list-group list-group-flush">
+              <!-- <li class="list-group-item"></li> -->
+            </ul>
+          </div>
+        </div>
+        <!-- Beginning of col 2 in rwo 1 -->
+        <div class="col-8 m-2">
+          <!-- Beginning of row 1 in col 2 -->
+          <div class="row-12">
+            <div class="card">
+              <div id="today-weather" class="card-body">
+                <!-- <h3>City:</h3>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p> -->
+              </div>
+            </div>
+          </div>
+          <!-- Beginning of row 2 in col 2 -->
+          <br />
+          <div class="row-12">
+            <h3>5-Day Forecast:</h3>
+          </div>
+          <!-- Beginning of row 3 in col 2 -->
+          <br />
+          <div id="boxes" class="row">
+            <!-- Blue box 1
+         <div id="box2" class="col-2 m-2 bg-primary">
+           <h4></h4> -->
+            <!-- <img>
+           <p></p>
+           <p></p> -->
+            <!-- </div> -->
+            <!-- Blue box 2 -->
+            <!-- <div class="col-2 m-2 bg-primary"> -->
+
+            <!-- </div> -->
+            <!-- Blue box 3-->
+            <!-- <div class="col-2 m-2 bg-primary">
+          <h4></h4> -->
+
+            <!-- </div> -->
+            <!-- Blue box 4 -->
+            <!-- <div class="col-2 m-2 bg-primary">
+         <h4></h4> -->
+
+            <!-- </div> -->
+            <!-- Blue box 5 -->
+            <!-- <div class="col-2 m-2 bg-primary"> -->
+
+            <!-- </div> -->
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./develop/script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
   </body>
-
-  <footer></footer>
 </html>
